@@ -1,0 +1,144 @@
+<html>
+  <head>
+    <title>Scratch Animation - Walk Cycle</title>
+    <style>
+		body {
+			font-family: "Helvetica Neue", "Helvetica", Arial,sans-serif;
+		}
+		footer #credits {
+			text-decoration: none !important;
+			color: white;
+		}
+		img {
+			vertical-align: middle
+		}
+		#download {
+			vertical-align: top;
+			align-self: right;
+		}
+		#heading {
+			padding: 1em
+		}
+		#heading:hover {
+			background-color: #0068f9
+		}
+		#fileName {
+			width: 100%;
+			text-align: center;
+			background-color: #fafafa;
+			padding: 1em 1.25em;
+			margin: .5em;
+			border: 2px solid rgba(0, 0, 0, 0.2);
+			border-radius: 0.25rem;
+			transition: border 0.2s, filter 0.2s, margin 0.2s;
+			cursor: pointer;
+		}
+		#fileName:hover, #download:hover {
+			border: 4px solid rgba(0, 0, 0, 0.2);
+			filter: brightness(85%);
+			margin: calc(0.5em-4px);
+		}
+		#download {
+			display: block;
+			text-align: center;
+			border: 4px solid #0fbd8c; 
+			transition: border 0.2s, filter 0.2s, margin 0.2s ease-in-out;
+			font-weight: bold;
+			background-color: #0fbd8c;
+			color: white;
+			padding: 1em 1.25em;
+			border: 0;
+			border-radius: 0.25rem;
+			margin: 0.5em;
+			text-decoration: none
+		}
+	</style>
+  </head>
+  <body bgcolor="#3d87ff">
+         		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<div id="topBar" style="background-color: #4d97ff; width: 100%; height: 50px; align-items: center; display: flex; flex-direction: row; position:fixed; top: 0; left: 0">
+			<ul style="list-style: none; display: flex; flex-direction: row; align-items: center; padding-left:0">
+				<li class="heading" style="padding: 1em">
+					<a style="color: #ffffff; text-decoration: none; background-color: #0fbd8c; padding: 1em" href="https://frametuning.github.io"><b>frame.github.io</b></a>
+				</li>
+				<li>
+					<a href="https://scratch.mit.edu"><image src="https://scratch.mit.edu/images/logo_sm.png" height="40px"></image></a>
+				</li>
+				<li class="heading" style="padding: 1em">
+					<a style="color: #ffffff; text-decoration: none" href="https://scratch.mit.edu/projects/519325355/"><b>Other Tutorials</b></a>
+				</li>
+				<a style="color: #ffffff; text-decoration: none" href="https://github.com/FrameTuning/Griffpatch-Scratch-Cat-Run-Cycle" target="_blank"><li class="heading" style="padding: 1em; background-color: #0068f9" onmouseover="this.style.background='#0056d0';" onmouseout="this.style.background='#0068f9';">
+					<b>Wanna have the Run Cycle? Click Here!</b>
+				</li></a>
+				<a style="color: #ffffff; text-decoration: none" href="downloads/"><li class="heading" style="padding: 1em; background-color: #4d97ff" onmouseover="this.style.background='#0068f9';" onmouseout="this.style.background='#4d97ff';">
+					<b>Downloads</b>
+				</li></a>
+		</div>
+		<div id="warningNotice" style="background-color: #ff4d5c; padding: 1em; margin-top:4em; color: white; left:0; border-radius:0.25em;">
+			<b>Scratch On!</b> The Site is still in work in progress ( WIP ).
+		</div>
+		
+		
+		
+		<!--TEXT-->
+		<font color="white">
+		<h3>To make a good Run cycle you've gotta be able to understand how to walk & how to animate (optional)</h3>
+		<h2>For this tutorial we are going to need somethings.<br>1. You have to be able to understand how to use Scratch<br>2. You gotta have a Sprite with a Run Cycle<br>3. That's it.</h2><br>
+		
+		<div id="warningNotice" style="background-color: #ff4d5c; padding: 1em; margin-top:4em; color: white; left:0; border-radius:0.25em;">
+			<b>Let's get coding!</b>
+		</div>
+		
+		
+		<h3><br>Let's begin with creating the character!<br>For this tutorial, I'm using Griffpatch Scratch Cat Run Cycle.</h3>
+		<img src="https://i.giphy.com/media/1R6MjRJur8LLS3xVbT/giphy.webp">
+		
+		<div id="warningNotice" style="background-color: #ff4d5c; padding: 1em; margin-top:4em; color: white; left:0; border-radius:0.25em;">
+			<b>For this tutorial, I'm gonna make the Cat Float and I'm only gonna focus on the Animation part. The Run Cycle.</b>
+		</div>
+		
+		<h3><br>Let's continue by making a new variable called "frame" for this sprite only.</h3>
+		<img src="https://raw.githubusercontent.com/FrameTuning/FrameScratch/main/assets/screenshot/frame%20variable.png">
+		<h3><br>Then create a simple script for the Left and Right Movement.</h3>
+		<h3>This is my own script feel free to copy it, it's just that you will not be able to move. You will be floating instead of moving. </h3>
+		<img src="https://raw.githubusercontent.com/FrameTuning/FrameScratch/main/assets/screenshot/Screenshot%202021-09-24%20at%2022.27.56.png">
+		<h3><br>Now, we want to switch the costume to the correct ones for our Run Cycle!</h3>
+		<h3><br>Let's look at which ones they are.<br>For me the run cycle begins at costume 1 and ends all the way down at costume number 16.<br>We will need those numbers (from 1 to 16).</h3>
+		<br>
+		<h3>Make a new Custom block and call it "Set Costume", DON'T make it Run without Screen Refresh.</h3>
+		<img src="https://raw.githubusercontent.com/FrameTuning/FrameScratch/main/assets/screenshot/set%20costume%20cb.png">
+		<h3><br>After that put a Switch Costume Block under the Set Costume Custom Block.<br>Add a ( + ) sign on the Switch Costume Block with the first input as 1.</h3>
+		<h3><br>Then add the Set Costume custom block under the Tick - Player Broadcast Message.</h3>
+		<img src="https://raw.githubusercontent.com/FrameTuning/FrameScratch/main/assets/screenshot/script2.png">
+		<h3>For this tutorial, I'm gonna add a Set Frame variable to ( 0 ) when the Green Flag is Clicked</h3>
+		<h3>If you have the same script as me and you test the project, If you press both A and D, you will see that the Animation is faster. We will get to that later.</h3>
+		<h3><br>If you have frame other than the Run Cycle, this is for you.</h3>
+		<h3>In fact this is pretty simple to do.<br>Take a MOD operator and put it on the Second Input of the ( + ), then put the frame variable on the Left Input of the MOD operator, and on the Right Input, put 16 in it.</h3>
+		<img src="https://raw.githubusercontent.com/FrameTuning/FrameScratch/main/assets/screenshot/script3.png">
+		<br>
+		<h3> If you want to make sure there is no glitch in the Animation you can put a FLOOR operator on the Second Input of the ( + ), then putting the MOD operator on the Input of the FLOOR operator.</h3>
+		<img src="https://raw.githubusercontent.com/FrameTuning/FrameScratch/main/assets/screenshot/script4.png">
+		<h3>Remeber I said I will fix the A & D key bug, that's what I'm gonna do!</h3>
+		<h3><br>To fix this bug you will need to do TWO simple things.First Delete the If key A pressed script and put an OR operator on the If D pressed script, then put a key A pressed on the other Input of the OR operator.</h3>
+		<h3><br>It should now look like this.</h3>
+		<img src="https://raw.githubusercontent.com/FrameTuning/FrameScratch/main/assets/screenshot/script5.png">
+		<br>
+		<h3>To finish this tutorial, I'm gonna make the Idle Standing Pose.</h3>
+		<h3><br>To make the Idle Standing Pose, put an If else on the Switch Costume block, and on the Input, put a GREATER operator and on the Left input of the GREATER operator, put a Frame varible, and on the Right input a 0</h3>
+		<h3>After that, put a Switch Costume to *name-of-your-idle-pose on the ELSE.</h3>
+		<br>
+		<h3>With All of this, your Code should look like this.</h3>
+		<img src="https://raw.githubusercontent.com/FrameTuning/FrameScratch/main/assets/screenshot/script6.png">
+		<h2><br>Congratulation you have finished the Run Cycle Animation Tutorial!</h2>
+		<h3>You can now make the rest of your game on your Own.</h3>
+		<br>
+		<h3>Here is the little Demo I made with this Tutorial</h3><br>
+		<div align="center"><br>
+		        <br><iframe src="https://scratch.mit.edu/projects/560978858/embed" allowtransparency="true" width="485" height="402" frameborder="2" scrolling="no" allowfullscreen></iframe>
+		</div>
+		        
+		
+		
+		</font>
+  </body>
+</html>
